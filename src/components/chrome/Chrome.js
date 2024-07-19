@@ -136,18 +136,24 @@ export const Chrome = ({
             <div
               style={{
                 marginRight: 4,
-                width: 20,
-                height: 20,
+                width: 24,
+                height: 24,
                 padding: 2,
                 borderRadius: 4,
                 cursor: 'pointer',
+                boxSizing: 'border-box',
               }}
               onClick={onClickEyeDropper}
               onMouseOver={showHighlight}
               onMouseEnter={showHighlight}
               onMouseOut={hideHighlight}
             >
-              <EyedropperIcon width={20} height={20} color="#666" />
+              <EyedropperIcon
+                width={20}
+                height={20}
+                color="#666"
+                style={{ pointerEvents: 'none' }}
+              />
             </div>
           )}
           <div style={styles.color}>
