@@ -110,12 +110,6 @@
     "rootDir": "src",
     "testRegex": "spec.js$"
   },
-  "eslintConfig": {
-    "extends": "@case",
-    "rules": {
-      "no-magic-numbers": 0
-    }
-  },
   "payload": {
     "builds": [
       {
