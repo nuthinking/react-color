@@ -7,10 +7,20 @@ import { ColorWrap, Saturation, Hue, Alpha, Checkboard } from '../common';
 import ChromeFields from './ChromeFields';
 import ChromePointer from './ChromePointer';
 import ChromePointerCircle from './ChromePointerCircle';
+import EyedropperIcon from '@icons/material/EyedropperVariantIcon';
+
+function showHighlight(e) {
+  e.currentTarget.style.background = '#eee';
+}
+
+function hideHighlight(e) {
+  e.currentTarget.style.background = 'transparent';
+}
 
 export const Chrome = ({
   width,
   onChange,
+  onClickEyeDropper,
   disableAlpha,
   rgb,
   hsl,
@@ -48,6 +58,7 @@ export const Chrome = ({
           },
           controls: {
             display: 'flex',
+            alignItems: 'center',
           },
           color: {
             width: '36px',
@@ -121,6 +132,24 @@ export const Chrome = ({
       </div>
       <div style={styles.body}>
         <div style={styles.controls} className="flexbox-fix">
+          {onClickEyeDropper && (
+            <div
+              style={{
+                marginRight: 4,
+                width: 20,
+                height: 20,
+                padding: 2,
+                borderRadius: 4,
+                cursor: 'pointer',
+              }}
+              onClick={onClickEyeDropper}
+              onMouseOver={showHighlight}
+              onMouseEnter={showHighlight}
+              onMouseOut={hideHighlight}
+            >
+              <EyedropperIcon width={20} height={20} color="#666" />
+            </div>
+          )}
           <div style={styles.color}>
             <div style={styles.swatch}>
               <div style={styles.active} />
