@@ -1,6 +1,6 @@
 {
   "name": "@beatflyer/react-color",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Fork of react-color",
   "main": "lib/index.js",
   "module": "es/index.js",

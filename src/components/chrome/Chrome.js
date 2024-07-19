@@ -67,7 +67,7 @@ export const Chrome = ({
             // marginTop: '6px',
             width: '28px',
             height: '28px',
-            borderRadius: '8px',
+            borderRadius: '14px',
             position: 'relative',
             overflow: 'hidden',
           },
