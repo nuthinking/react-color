@@ -2,6 +2,6 @@
 *.DS_Store
 node_modules
 
-lib
-es
+dist/es
+dist/lib
 .babelrc_backup
