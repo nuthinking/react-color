@@ -21,7 +21,7 @@ export interface ChromePickerStylesProps {
 export interface ChromePickerProps extends ColorPickerProps<ChromePicker> {
   disableAlpha?: boolean | undefined;
   styles?: Partial<Classes<ChromePickerStylesProps>> | undefined;
-  onClickEyeDropper?: () => void;
+  onClickEyeDropper?: (e: MouseEvent) => void;
 }
 
 export default class ChromePicker extends Component<ChromePickerProps> {}
